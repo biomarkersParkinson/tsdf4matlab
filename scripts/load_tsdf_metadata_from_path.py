@@ -1,0 +1,43 @@
+"""
+Module for saving the metadata and the binary files from a data objects.
+
+input: 
+path_to_metadata - a string containing the path to the metadata file.
+
+return: 
+Return_list_data - a list of data objects loaded from the binary files described in the metadata.
+Return_list_metadata - a list of metadata objects read from the metadata file.
+Success - boolean value indicating if the data was loaded correctly.
+
+"""
+
+import os
+import numpy as np
+import tsdf as tsdf
+
+
+Success:bool = False
+
+# Path to the metadata file
+#path_to_metadata = "/Users/vedran/git/biomarkers_repo/tsdf/tests/data/example_10_3_float32_meta.json"
+
+# Load the metadata
+metadata_dict = tsdf.load_metadata_from_path(path_to_metadata)
+
+# List of metadata objects read from the metadata file
+Return_list_metadata:list = []
+
+# List of data objects loaded from the binary files
+Return_list_data:list = []
+
+# Load the data from each binary file described in the metadata
+for metadata_dict_key in metadata_dict.keys():
+    metadata = metadata_dict[metadata_dict_key]
+    # Save the metadata
+    Return_list_metadata.append(metadata)
+    # Save the data
+    data = metadata.load_binary()
+    Return_list_data.append(data)
+
+
+Success = True
