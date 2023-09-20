@@ -6,7 +6,6 @@ function [py_dicts, py_arrays] = load_tsdf_metadata_from_path(mat_metadata_path)
     %   py_dicts: list of python dictionaries containing the metadata
     %   py_arrays: list of python arrays containing the data
 
-    mat_metadata_path= '~/git/tsdf4matlab/data/example_10_3_float32_meta.json';  % Provide the actual path
     py_metadata_path = py.str(mat_metadata_path);
 
     % Run the python script load_tsdf_metadata_from_path.py and get the 3 outputs
@@ -20,10 +19,10 @@ function [py_dicts, py_arrays] = load_tsdf_metadata_from_path(mat_metadata_path)
 
     % Convert to MATLAB data structures in case the executions was successful 
     if mat_succ
-        [mat_list_metadata, mat_list_data] = py2mat_list_dict(py_list_metadata, py_list_data);
+       [mat_list_metadata, mat_list_data] = py2mat_list_dict(py_list_data, py_list_metadata);
     else
-        mat_list_metadata = [];
-        mat_list_data = [];
+       mat_list_metadata = [];
+       mat_list_data = [];
     end
     
     
