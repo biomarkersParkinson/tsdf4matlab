@@ -13,13 +13,11 @@ Success - boolean value indicating if the data was loaded correctly.
 
 import os
 import numpy as np
+import json
 import tsdf as tsdf
 
 
 Success:bool = False
-
-# Path to the metadata file
-#path_to_metadata = "/Users/vedran/git/biomarkers_repo/tsdf/tests/data/example_10_3_float32_meta.json"
 
 # Load the metadata
 metadata_dict = tsdf.load_metadata_from_path(path_to_metadata)
@@ -34,7 +32,7 @@ Return_list_data:list = []
 for metadata_dict_key in metadata_dict.keys():
     metadata = metadata_dict[metadata_dict_key]
     # Save the metadata
-    Return_list_metadata.append(metadata)
+    Return_list_metadata.append(json.dumps(metadata.get_plain_tsdf_dict_copy()))
     # Save the data
     data = metadata.load_binary()
     Return_list_data.append(data)
