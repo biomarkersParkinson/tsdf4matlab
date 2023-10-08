@@ -1,10 +1,10 @@
-function [py_dicts, py_arrays] = load_legacy_tsdf_metadata_from_path(mat_metadata_path)
-    % Load the metadata and data from a path to a .mat file
+function [mat_list_metadata, mat_list_data] = load_legacy_tsdf_metadata_from_path(mat_metadata_path)
+    % Load metadata and data from a path to a legacy TSDF metadata file
     % Input:
-    %   mat_metadata_path: path to the .mat file containing the metadata
+    %   mat_metadata_path: the json file containing the metadata
     % Output:
-    %   py_dicts: list of python dictionaries containing the metadata
-    %   py_arrays: list of python arrays containing the data
+    %   mat_list_metadata: list of the metadata objects describing each binary file
+    %   mat_list_data: list of time series data (each element representing a content of a binary file)
 
     py_metadata_path = py.str(mat_metadata_path);
 
