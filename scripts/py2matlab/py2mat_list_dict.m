@@ -16,14 +16,7 @@ function [matlab_dicts, matlab_arrays] = py2mat_list_dict(py_arrays, py_dicts)
     
     % Convert Python dictionaries to MATLAB structures
     for i = 1:numel(py_dicts)
-        keys = cell(py_dicts{i}.keys);
-        values = cell(py_dicts{i}.values);
-        matlab_dicts{i} = struct();
-        for j = 1:numel(keys)
-            key = char(keys{j});
-            value = values{j};
-            matlab_dicts{i}.(key) = value;
-        end
+        matlab_dicts{i} = jsondecode(string(py_dicts{i}));
     end
     
     % Convert numpy arrays to MATLAB arrays
