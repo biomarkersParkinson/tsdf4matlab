@@ -12,7 +12,7 @@
 
 3. (optional) Visit [MATLAB's Python Support Page](MATLAB_Python_support_link) to verify compatible Python versions for your MATLAB version.
 
-4. Download and install the required Python version (e.g., Python 3.9).
+4. Download and install a Python version >= 3.9.
 
 5. In MATLAB, execute the following code, replacing `'enter_path_to_python_executable_here'` with the path to your `python.exe` file:
 
