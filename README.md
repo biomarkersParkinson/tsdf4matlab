@@ -10,7 +10,7 @@
 
 2. Check your MATLAB version by running `ver` in MATLAB.
 
-3. (optional) Visit [MATLAB's Python Support Page](MATLAB_Python_support_link) to verify compatible Python versions for your MATLAB version.
+3. (optional) Visit [MATLAB's Python Support Page](https://nl.mathworks.com/support/requirements/python-compatibility.html) to verify compatible Python versions for your MATLAB version.
 
 4. Download and install a Python version >= 3.9.
 
