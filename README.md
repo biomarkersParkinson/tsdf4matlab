@@ -1,4 +1,4 @@
-# Interface for using [tsdf](https://github.com/biomarkersParkinson/tsdf) lib from Matlab
+# Matlab wrapper for the Python [tsdf](https://github.com/biomarkersParkinson/tsdf) library
 
 
 # Installation
