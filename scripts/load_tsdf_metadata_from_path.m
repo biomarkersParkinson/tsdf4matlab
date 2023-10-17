@@ -10,7 +10,7 @@ function [mat_list_metadata, mat_list_data] = load_tsdf_metadata_from_path(mat_m
     py_metadata_path = py.str(mat_metadata_path);
 
     % Run the python script load_tsdf_metadata_from_path.py and get the 3 outputs
-    [py_succ, py_list_metadata, py_list_data] = pyrunfile("python/load_tsdf_metadata_from_path.py",["Success" "Return_list_metadata" "Return_list_data"], path_to_metadata=py_metadata_path);
+    [py_succ, py_list_metadata, py_list_data] = pyrunfile("python/load_tsdf_metadata_from_path.py", "save_metadata_and_binary_files",["Success" "Return_list_metadata" "Return_list_data"], path_to_metadata=py_metadata_path);
 
     % Convert Python boolean to MATLAB logical
     mat_succ = logical(py_succ);
