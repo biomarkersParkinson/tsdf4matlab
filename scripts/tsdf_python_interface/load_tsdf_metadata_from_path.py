@@ -19,10 +19,9 @@ import tsdf as tsdf
 
 Success:bool = False
 
-
+path_to_metadata = "/Users/vedran/git/biomarkers_repo/tsdf4matlab/data/ppp_format_meta.json"
 # Load the metadata
-with open(path_to_metadata, "r") as file:
-    metadata_dict = tsdf.load_metadata_legacy_file(file)
+metadata_dict = tsdf.load_metadata_from_path(path_to_metadata)
 
 # List of metadata objects read from the metadata file
 Return_list_metadata:list = []
@@ -39,4 +38,6 @@ for metadata_dict_key in metadata_dict.keys():
     data = metadata.load_binary()
     Return_list_data.append(data)
 
+
 Success = True
+print(len(Return_list_metadata))
