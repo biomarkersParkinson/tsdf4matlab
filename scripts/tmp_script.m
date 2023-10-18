@@ -1,7 +1,7 @@
 % Define the paths and file names
 clc
 metadata_path = '..\data\ppp_format_meta_legacy.json';
-output_dir = '\data\test';
+output_dir = '..\data\test';
 output_meta_name = 'output.json';
 
 % Load metadata and data

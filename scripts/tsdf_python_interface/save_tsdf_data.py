@@ -24,10 +24,10 @@ Success:bool = False
 py_updated_list_metadata:List[any] = []
 
 for metadata, data in zip(py_list_metadata, py_list_data):
-    file_name = metadata['file_name']
+    metadata = json.loads(metadata)
+    file_name = metadata["file_name"]
     new_metadata = tsdf.write_binary_file(py_dir_path, file_name, data, metadata)
     py_updated_list_metadata.append(new_metadata)
-
 
 tsdf.write_metadata(py_updated_list_metadata, py_metadata_file_name)
 
