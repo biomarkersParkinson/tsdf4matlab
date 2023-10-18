@@ -1,6 +1,7 @@
 % Define the paths and file names
-metadata_path = 'data/ppp_format_meta_legacy.json';
-output_dir = 'data/test/';
+clc
+metadata_path = '..\data\ppp_format_meta_legacy.json';
+output_dir = '\data\test';
 output_meta_name = 'output.json';
 
 % Load metadata and data
@@ -15,8 +16,8 @@ end
 mat_succ = save_tsdf_data(mat_list_metadata, mat_list_data, output_dir, output_meta_name);
 
 % Display success message
-if mat_succ
-    disp('Data saved successfully.');
-else
-    disp('Error while saving data.');
-end
+% if mat_succ
+%     disp('Data saved successfully.');
+% else
+%     disp('Error while saving data.');
+% end

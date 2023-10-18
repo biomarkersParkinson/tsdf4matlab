@@ -158,3 +158,5 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+scripts/load_legacy_tsdf_metadata_from_path.asv
+scripts/matlab2python/mat2py_listmeta.asv

@@ -7,9 +7,6 @@ function [py_arrays] = mat2py_listnumpy(matlab_arrays)
     % Returns:
     %   py_arrays: A list of NumPy arrays.
 
-   % Initialize Python engine
-   py = pyenv;
-
    % Initialize a Python list for py_arrays
    py_arrays = py.list();
 

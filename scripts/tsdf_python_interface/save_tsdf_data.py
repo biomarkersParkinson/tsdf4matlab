@@ -21,11 +21,6 @@ from typing import List
 
 Success:bool = False
 
-py_list_metadata:List[any] = []
-py_list_data: List[np.ndarray] = []
-py_dir_path: str = ""
-py_metadata_file_name: str = ""
-
 py_updated_list_metadata:List[any] = []
 
 for metadata, data in zip(py_list_metadata, py_list_data):

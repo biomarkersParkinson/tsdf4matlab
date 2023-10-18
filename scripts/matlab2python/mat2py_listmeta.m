@@ -8,9 +8,6 @@ function [py_dicts] = mat2py_listmeta(matlab_dicts)
     %   
     %   py_dicts: A list of Python dictionaries.
 
-    % Initialize Python engine
-    py = pyenv;
-
     % Initialize Python list for py_dicts
     py_dicts = py.list();
 
