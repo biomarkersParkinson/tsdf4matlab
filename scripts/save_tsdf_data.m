@@ -8,6 +8,8 @@ function [mat_succ] = save_tsdf_data(mat_list_metadata, mat_list_data, mat_dir_p
     % Output:
     %   mat_succ: boolean value determening if the execution was successful or not
 
+    % Add the path to the matlab scripts
+    addpath(genpath('.'));
 
     % Check if the input lists match in size
       if length(mat_list_metadata) ~= length(mat_list_data)

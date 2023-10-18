@@ -6,6 +6,9 @@ function [mat_list_metadata, mat_list_data] = load_tsdf_metadata_from_path(mat_m
     %   mat_list_metadata: list of the metadata objects describing each binary file
     %   mat_list_data: list of time series data (each element representing a content of a binary file)
 
+    % Add the path to the matlab scripts
+    addpath(genpath('.'));
+    
     % Convert the path to a string
     py_metadata_path = py.str(mat_metadata_path);
 
