@@ -36,7 +36,7 @@ def load_tsdf_metadata_from_path(path_to_metadata:str):
 
         Return_list_metadata.append(json.dumps(metadata.get_plain_tsdf_dict_copy()))
 
-        data = metadata.load_binary()
+        data = tsdf.load_binary_from_metadata(metadata)
         Return_list_data.append(data)
 
     Success = True
