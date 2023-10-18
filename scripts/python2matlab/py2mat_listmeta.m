@@ -11,7 +11,7 @@ function [matlab_dicts] = py2mat_listmeta(py_dicts)
     matlab_dicts = cell(size(py_dicts));
     
     % Convert Python dictionaries to MATLAB structures
-    for i = 1:numel(py_dicts)
+    for i = 1:length(py_dicts)
         matlab_dicts{i} = jsondecode(string(py_dicts{i}));
     end
 end
