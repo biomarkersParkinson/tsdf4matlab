@@ -6,7 +6,7 @@ function test_successful_load(testCase)
     % Test that the function can load the legacy metadata and binary files
     
     % Arrange
-    input_path = 'data/ppp_format_meta_legacy.json';
+    input_path = '..\..\data\ppp_format_meta_legacy.json';
     
     % Act
     [mat_list_metadata, mat_list_data] = load_legacy_tsdf_metadata_from_path(input_path);
