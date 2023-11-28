@@ -60,6 +60,16 @@
 
 
 
+### Using the MATLAB Wrapper
+
+1. Clone this repository to your local machine.
+
+2. Open MATLAB and add the cloned folder to your MATLAB path.
+
+```matlab
+addpath('full_path_to_cloned_folder')
+```
+
 ## Note
 We aim to use this tutorial to integrate tsdf into the matlab code:
 

@@ -32,13 +32,17 @@ Return_list_metadata:list = []
 Return_list_data:list = []
 
 # Load the data from each binary file described in the metadata
+time_file = True
 for metadata_dict_key in metadata_dict.keys():
     metadata = metadata_dict[metadata_dict_key]
+    if time_file:
+        metadata.rows = metadata.rows * 2
     # Save the metadata
     Return_list_metadata.append(json.dumps(metadata.get_plain_tsdf_dict_copy()))
     # Save the data
     data = tsdf.load_binary_from_metadata(metadata)
     Return_list_data.append(data)
+    time_file = False
 
 Success = True
 
