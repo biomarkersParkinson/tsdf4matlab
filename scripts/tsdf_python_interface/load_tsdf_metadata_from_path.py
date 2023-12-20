@@ -34,10 +34,15 @@ Return_list_data:list = []
 # Load the data from each binary file described in the metadata
 for metadata_dict_key in metadata_dict.keys():
     metadata = metadata_dict[metadata_dict_key]
+
     # Save the metadata
     Return_list_metadata.append(json.dumps(metadata.get_plain_tsdf_dict_copy()))
     # Save the data
-    data = tsdf.load_binary_from_metadata(metadata)
+    try: start_row
+    except NameError: start_row = 0
+    try: end_row
+    except NameError: end_row = -1
+    data = tsdf.load_binary_from_metadata(metadata, start_row, end_row)
     Return_list_data.append(data)
 
 Success = True

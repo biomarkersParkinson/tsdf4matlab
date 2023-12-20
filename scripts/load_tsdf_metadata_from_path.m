@@ -17,8 +17,7 @@ function [mat_list_metadata, mat_list_data] = load_tsdf_metadata_from_path(mat_m
 
     % Convert Python boolean to MATLAB logical
     mat_succ = logical(py_succ);
-    % Display the value of mat_succ
-    disp(mat_succ);
+    
 
 
     % Convert to MATLAB data structures in case the executions was successful 
