@@ -17,7 +17,7 @@ function [matlab_arrays] = py2mat_listnumpy(py_arrays)
         % Reshape the array if necessary
         dims = cell(py_arrays{i}.shape);
         if numel(dims) > 1
-            matlab_arrays{i} = reshape(matlab_arrays{i}, dims{:});
+            matlab_arrays{i} = reshape(matlab_arrays{i}, dims{2}, dims{1})';            % Issue in reshaping the IMU --> now fixed --> how can we do it best practice
         elseif numel(dims) == 1
             matlab_arrays{i} = reshape(matlab_arrays{i}, [], 1);
         end
