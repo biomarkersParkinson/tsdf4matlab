@@ -23,7 +23,7 @@ function [mat_list_metadata, mat_list_data] = load_tsdf_metadata_from_path(mat_m
     % Convert to MATLAB data structures in case the executions was successful 
     if mat_succ
       mat_list_metadata = py2mat_listmeta(py_list_metadata);
-      mat_list_data = py2mat_listnumpy(py_list_data);
+      mat_list_data = py2mat_listnumpy2(py_list_data);
     else
        mat_list_metadata = [];
        mat_list_data = [];

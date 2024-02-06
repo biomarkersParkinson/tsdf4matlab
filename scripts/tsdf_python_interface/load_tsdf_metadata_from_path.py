@@ -19,7 +19,7 @@ import tsdf as tsdf
 
 Success:bool = False
 
-# path_to_metadata = "/Users/vedran/git/biomarkers_repo/tsdf4matlab/data/ppp_format_meta_legacy.json"
+# path_to_metadata = r"C:\Users\z863160\Documents\AI for Parkinson\PPG\TSDF data new\Rust output\WatchData.PPG.Week104\066B5A296CC18FDE780196452F42FEB507D9F1C6659040B7FFB32AF6B0D8F74A\segment_0001_meta.json"
 
 # Load the metadata
 with open(path_to_metadata, "r") as file:
@@ -47,4 +47,4 @@ for metadata_dict_key in metadata_dict.keys():
 
 Success = True
 
-print(len(Return_list_metadata))
+# print(len(Return_list_metadata))
