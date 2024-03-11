@@ -12,7 +12,7 @@ function [py_arrays] = mat2py_listnumpy(matlab_arrays)
 
    % Convert MATLAB arrays to NumPy arrays
    for i = 1:numel(matlab_arrays)
-       np_array = py.numpy.array(matlab_arrays{i}(:).');  % Convert to column vector and then to NumPy array
+       np_array = py.numpy.array(matlab_arrays{i});  % Convert to column vector and then to NumPy array
        py_arrays.append(np_array);
    end
 end

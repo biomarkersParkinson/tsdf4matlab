@@ -22,7 +22,7 @@ function [mat_succ] = save_tsdf_data(mat_list_metadata, mat_list_data, mat_dir_p
     py_dir_path = py.str(mat_dir_path);
     py_metadata_file_name = py.str(mat_metadata_file_name);
 
-    
+   
     % Run the python script save_tsdf_data.py and get the 3 outputs
     [py_succ, ~] = pyrunfile("tsdf_python_interface\save_tsdf_data.py",["Success" "Return_list_metadata" "Return_list_data"], py_list_metadata=py_list_metadata, py_list_data=py_list_data, py_dir_path=py_dir_path, py_metadata_file_name=py_metadata_file_name);
 
