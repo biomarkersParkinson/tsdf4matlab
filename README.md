@@ -1,5 +1,6 @@
 # Matlab wrapper for the Python [tsdf](https://github.com/biomarkersParkinson/tsdf) library
 
+[![Latest release](https://img.shields.io/github/release/biomarkersparkinson/tsdf4matlab.svg)](https://github.com/biomarkersparkinson/tsdf4matlab/releases/latest)
 [![DOI](https://zenodo.org/badge/693538057.svg)](https://zenodo.org/doi/10.5281/zenodo.10838512)
 [![GitHub license](https://img.shields.io/github/license/biomarkersParkinson/tsdf4matlab)](https://github.com/biomarkersparkinson/tsdf4matlab/blob/main/LICENSE)
 
