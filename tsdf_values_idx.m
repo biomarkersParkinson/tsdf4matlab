@@ -4,7 +4,8 @@ function indices = tsdf_values_idx(metadata_list, suffix)
         % Use regular expression to match the pattern
         expression = ['**' suffix '.bin'];
         if ~isempty(regexp(metadata_list{i}.file_name, expression, 'once'))
-            indices = [indices, i];
+            indices = i;
+            return
         end
     end
 end
